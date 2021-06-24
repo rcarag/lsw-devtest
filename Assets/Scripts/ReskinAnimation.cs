@@ -12,7 +12,7 @@ namespace Game
     [RequireComponent(typeof(SpriteRenderer))]
     public class ReskinAnimation : MonoBehaviour
     {
-        [SerializeField] private SpritesheetSO _spritesheet;
+        [SerializeField] private SpritesheetSO _spritesheet = null;
 
         // Set in Awake()
         private SpriteRenderer _spriteRenderer;
