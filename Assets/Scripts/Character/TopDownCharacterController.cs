@@ -5,11 +5,11 @@ namespace Game
     [RequireComponent(typeof(Rigidbody2D))]
     public class TopDownCharacterController : MonoBehaviour
     {
-        public float MoveSpeed;
-        public MoveDirection MoveDirection;
+        public float MoveSpeed = 1;
+        public MoveDirection MoveDirection = MoveDirection.None;
         
         // Set in Awake()
-        private Rigidbody2D _rigidbody;
+        private Rigidbody2D _rigidbody = null;
 
         private void Awake()
         {
