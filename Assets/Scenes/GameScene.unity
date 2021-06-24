@@ -407,6 +407,7 @@ GameObject:
   - component: {fileID: 575484796}
   - component: {fileID: 575484798}
   - component: {fileID: 575484797}
+  - component: {fileID: 575484799}
   m_Layer: 5
   m_Name: Controls
   m_TagString: Untagged
@@ -451,7 +452,7 @@ MonoBehaviour:
   m_MinWidth: -1
   m_MinHeight: -1
   m_PreferredWidth: -1
-  m_PreferredHeight: 20
+  m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -463,6 +464,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575484795}
   m_CullTransparentMesh: 0
+--- !u!114 &575484799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575484795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 5
+  m_Spacing: 5
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &754240654
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,9 +524,9 @@ RectTransform:
   m_Father: {fileID: 575484796}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -80, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &754240656
@@ -515,7 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -617,9 +644,9 @@ RectTransform:
   m_Father: {fileID: 575484796}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 65, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &786571566
@@ -635,7 +662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -764,7 +791,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_Spacing: 5
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
@@ -860,7 +887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1098,9 +1125,9 @@ MonoBehaviour:
   m_MinWidth: -1
   m_MinHeight: -1
   m_PreferredWidth: -1
-  m_PreferredHeight: 60
+  m_PreferredHeight: -1
   m_FlexibleWidth: -1
-  m_FlexibleHeight: -1
+  m_FlexibleHeight: 100
   m_LayoutPriority: 1
 --- !u!114 &1083141979
 MonoBehaviour:
@@ -1270,7 +1297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
   m_MinWidth: -1
-  m_MinHeight: -1
+  m_MinHeight: 20
   m_PreferredWidth: -1
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
@@ -1303,7 +1330,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1409,8 +1436,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _positiveButton: {fileID: 786571566}
   _negativeButton: {fileID: 754240656}
-  _dialogScreenPositive: {fileID: 11400000, guid: 6eb5663ec68784811a58aa86b4102fab, type: 2}
-  _dialogScreenNegative: {fileID: 11400000, guid: 4450badcc932445b1883b91e3ba36193, type: 2}
+  _nameText: {fileID: 1375875553}
+  _bodyText: {fileID: 1083141979}
+  _positiveButtonText: {fileID: 574991351}
+  _negativeButtonText: {fileID: 1946603966}
+  _dialogScreenOpenedEvent: {fileID: 11400000, guid: 08ea60c8228ef430fbb709d25112a13f, type: 2}
+  _dialogScreenPositiveEvent: {fileID: 11400000, guid: 6eb5663ec68784811a58aa86b4102fab, type: 2}
+  _dialogScreenNegativeEvent: {fileID: 11400000, guid: 4450badcc932445b1883b91e3ba36193, type: 2}
 --- !u!1 &1445169080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,6 +1558,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inventoryScreen: {fileID: 2142873583}
   _dialogScreen: {fileID: 1395465467}
+  _dialogScreenOpenedEvent: {fileID: 11400000, guid: 08ea60c8228ef430fbb709d25112a13f, type: 2}
+  _dialogScreenClosedEvent: {fileID: 11400000, guid: 9ba0058e2c18d43c4af50f9c5e16c0b2, type: 2}
   _inventoryScreenOpenedEvent: {fileID: 11400000, guid: a986974db9dc14ebc893f5f11475649e, type: 2}
   _inventoryScreenClosedEvent: {fileID: 11400000, guid: ca70b9ff4466341c6b9770a9a1e60d6d, type: 2}
   _setPlayerInputEnabledEvent: {fileID: 11400000, guid: a46df552750504095bdeab940f8b8b6c, type: 2}

@@ -1,5 +1,5 @@
-﻿using System;
-using UnityAtoms.BaseAtoms;
+﻿using UnityAtoms.BaseAtoms;
+using UnityAtoms.Game;
 using UnityEngine;
 
 namespace Game
@@ -12,6 +12,8 @@ namespace Game
         
 
         [Header("Events")]
+        [SerializeField] private DialogSOEvent _dialogScreenOpenedEvent = null;
+        [SerializeField] private VoidEvent _dialogScreenClosedEvent = null;
         [SerializeField] private VoidEvent _inventoryScreenOpenedEvent = null;
         [SerializeField] private VoidEvent _inventoryScreenClosedEvent = null;
         [SerializeField] private BoolEvent _setPlayerInputEnabledEvent = null;
@@ -20,20 +22,34 @@ namespace Game
         {   
             _inventoryScreen.gameObject.SetActive(false);
             _dialogScreen.gameObject.SetActive(false);
-            
-            _inventoryScreenOpenedEvent.Register(InventoryScreenOpened);
-            _inventoryScreenClosedEvent.Register(InventoryScreenClosed);
+
+            _dialogScreenOpenedEvent.Register(OnDialogScreenOpened);
+            _dialogScreenClosedEvent.Register(OnDialogScreenClosed);
+            _inventoryScreenOpenedEvent.Register(OnInventoryScreenOpened);
+            _inventoryScreenClosedEvent.Register(OnInventoryScreenClosed);
         }
 
-        private void InventoryScreenOpened()
+        private void OnInventoryScreenOpened()
         {
             _setPlayerInputEnabledEvent.Raise(false);
             _inventoryScreen.gameObject.SetActive(true);
         }
 
-        private void InventoryScreenClosed()
+        private void OnInventoryScreenClosed()
         {
             _inventoryScreen.gameObject.SetActive(false);
+            _setPlayerInputEnabledEvent.Raise(true);
+        }
+
+        private void OnDialogScreenOpened()
+        {
+            _setPlayerInputEnabledEvent.Raise(false);
+            _dialogScreen.gameObject.SetActive(true);
+        }
+
+        private void OnDialogScreenClosed()
+        {
+            _dialogScreen.gameObject.SetActive(false);
             _setPlayerInputEnabledEvent.Raise(true);
         }
     }
