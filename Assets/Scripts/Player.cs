@@ -28,10 +28,38 @@ namespace Game
 
         private void Update()
         {
-            HandleInput();
+            HandleMoveInput();
+            HandlePlayerActions();
         }
 
-        private void HandleInput()
+        private void HandlePlayerActions()
+        {
+            if (HandleOpenInventoryAction())
+                return;
+
+            if (HandleInteractAction())
+                return;
+        }
+
+        private bool HandleInteractAction()
+        {
+            if (!_controls.Player.Interact.triggered)
+                return false;
+            
+            Debug.Log("interact");
+            return true;
+        }
+
+        private bool HandleOpenInventoryAction()
+        {
+            if (!_controls.Player.OpenInventory.triggered)
+                return false;
+
+            Debug.Log("open inventory");
+            return true;
+        }
+
+        private void HandleMoveInput()
         {
             var _moveInput = _controls.Player.Movement.ReadValue<Vector2>();
 
