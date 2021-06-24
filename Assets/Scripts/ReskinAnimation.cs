@@ -51,7 +51,7 @@ namespace Game
             var sprites = AssetDatabase.LoadAllAssetsAtPath(spritesheetPath)
                 .OfType<Sprite>();
 
-            ReskinSprites.AddRange(sprites);    ;
+            ReskinSprites.AddRange(sprites);
         }
 
         private readonly Dictionary<string, Sprite> _spritesDict = new Dictionary<string, Sprite>();
