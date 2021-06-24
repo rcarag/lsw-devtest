@@ -7,8 +7,9 @@ namespace Game
     public class UIController : MonoBehaviour
     {
         [Header("UI Elements")]
-        [SerializeField]
-        private RectTransform _inventoryScreen = null;
+        [SerializeField] private RectTransform _inventoryScreen = null;
+        [SerializeField] private RectTransform _dialogScreen = null;
+        
 
         [Header("Events")]
         [SerializeField] private VoidEvent _inventoryScreenOpenedEvent = null;
@@ -18,6 +19,7 @@ namespace Game
         private void Awake()
         {   
             _inventoryScreen.gameObject.SetActive(false);
+            _dialogScreen.gameObject.SetActive(false);
             
             _inventoryScreenOpenedEvent.Register(InventoryScreenOpened);
             _inventoryScreenClosedEvent.Register(InventoryScreenClosed);

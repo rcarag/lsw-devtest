@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Game
 {
@@ -9,7 +10,7 @@ namespace Game
     {
         [Header("Events")]
         [SerializeField] private BoolEvent _inputEnabledChangedEvent = null;
-        [SerializeField] VoidEvent _openInventoryScreenEvent = null;
+        [SerializeField] VoidEvent _inventoryScreenOpenedEvent = null;
         
         // Set in Awake()
         private GameControls _controls;
@@ -69,7 +70,7 @@ namespace Game
                 return false;
 
             Debug.Log("open inventory");
-            _openInventoryScreenEvent.Raise();
+            _inventoryScreenOpenedEvent.Raise();
             
             return true;
         }

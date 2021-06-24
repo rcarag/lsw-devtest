@@ -14,10 +14,10 @@ namespace Game
         
         private void Awake()
         {
-            _closeButton.onClick.AddListener(CloseInventory);
+            _closeButton.onClick.AddListener(OnCloseButtonPressed);
         }
 
-        private void CloseInventory()
+        private void OnCloseButtonPressed()
         {
             _inventoryScreenClosedEvent.Raise();
         }
