@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.unity-atoms.unity-atoms": {
+      "version": "https://github.com/unity-atoms/unity-atoms.git#master",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "7b6b8431703b557647cd11e6632e0df8888fb8db"
+    },
     "com.unity.2d.animation": {
       "version": "4.2.4",
       "depth": 0,
