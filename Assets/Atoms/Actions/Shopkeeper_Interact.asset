@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c76341a2e28dc4429955bc0321d89d19, type: 3}
+  m_Name: Shopkeeper_Interact
+  m_EditorClassIdentifier: 
+  _developerDescription: 
+  _setPlayerInputEnabledEvent: {fileID: 11400000, guid: a46df552750504095bdeab940f8b8b6c, type: 2}
+  _dialogScreenOpenedEvent: {fileID: 11400000, guid: 08ea60c8228ef430fbb709d25112a13f, type: 2}
+  _dialogScreenNextEvent: {fileID: 11400000, guid: ee57b12a08c27419285298db519867db, type: 2}
+  _dialogScreenClosedEvent: {fileID: 11400000, guid: 9ba0058e2c18d43c4af50f9c5e16c0b2, type: 2}
+  _shopScreenOpenedEvent: {fileID: 11400000, guid: 8290ac22b061d49c0ad2e24fd8838dfd, type: 2}
+  _shopScreenClosedEvent: {fileID: 11400000, guid: 2f8c53e1320524a8ebbb451389261ba6, type: 2}
+  _helloDialog: {fileID: 11400000, guid: 1dbbfc34bbc8f40d888a02a3ffa9302e, type: 2}
+  _goodbyeDialog: {fileID: 11400000, guid: e6bb0fa3f26794ee9b7e4365cf919be6, type: 2}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: UI_DialogScreen_Opened
   m_EditorClassIdentifier: 
   _developerDescription: 
-  _replayBufferSize: 1
-  _inspectorRaiseValue: {fileID: 11400000, guid: 72622fba07f2745ec80f274ad524b34a, type: 2}
+  _replayBufferSize: 0
+  _inspectorRaiseValue: {fileID: 0}
