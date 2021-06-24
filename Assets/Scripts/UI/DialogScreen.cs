@@ -10,10 +10,10 @@ namespace Game
         [Header("UI Elements")]
         [SerializeField] private Button _positiveButton = null;
         [SerializeField] private Button _negativeButton = null;
-        [SerializeField] private Text _nameText;
-        [SerializeField] private Text _bodyText;
-        [SerializeField] private Text _positiveButtonText;
-        [SerializeField] private Text _negativeButtonText;
+        [SerializeField] private Text _nameText = null;
+        [SerializeField] private Text _bodyText = null;
+        [SerializeField] private Text _positiveButtonText = null;
+        [SerializeField] private Text _negativeButtonText = null;
 
         [Header("Events")]
         [SerializeField] private DialogSOEvent _dialogScreenOpenedEvent = null;
