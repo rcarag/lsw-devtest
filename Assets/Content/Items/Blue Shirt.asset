@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb22375f76e9a48d88d7554c2610f492, type: 3}
-  m_Name: Red Shirt
+  m_Name: Blue Shirt
   m_EditorClassIdentifier: 
-  _itemName: Red Shirt
-  _icon: {fileID: 21300000, guid: f2c85e19cafd045d58db884684dca961, type: 3}
+  _itemName: Blue Shirt
+  _icon: {fileID: 21300000, guid: 257ae234144af4fde9688bbf04ff7ed7, type: 3}
   _buyPrice: 10
   _sellPrice: 2
   _requiredEquipSlots:
