@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityAtoms.BaseAtoms;
 using UnityEngine;
 
 namespace Game
@@ -6,6 +7,10 @@ namespace Game
     [RequireComponent(typeof(TopDownCharacterController))]
     public class Player : MonoBehaviour
     {
+        [Header("Events")]
+        [SerializeField] private BoolEvent _inputEnabledChangedEvent = null;
+        [SerializeField] VoidEvent _openInventoryScreenEvent = null;
+        
         // Set in Awake()
         private GameControls _controls;
         private TopDownCharacterController _controller;
@@ -14,6 +19,13 @@ namespace Game
         {
             _controller = GetComponent<TopDownCharacterController>();
             _controls = new GameControls();
+            
+            _inputEnabledChangedEvent.Register(OnInputEnabledChanged);
+        }
+
+        private void OnDestroy()
+        {
+            _inputEnabledChangedEvent.Unregister(OnInputEnabledChanged);
         }
 
         private void OnEnable()
@@ -24,6 +36,7 @@ namespace Game
         private void OnDisable()
         {
             _controls.Disable();
+            _controller.MoveDirection = MoveDirection.None;
         }
 
         private void Update()
@@ -56,6 +69,8 @@ namespace Game
                 return false;
 
             Debug.Log("open inventory");
+            _openInventoryScreenEvent.Raise();
+            
             return true;
         }
 
@@ -73,6 +88,11 @@ namespace Game
                 _controller.MoveDirection = MoveDirection.Left;
             else if (_moveInput.x > 0)
                 _controller.MoveDirection = MoveDirection.Right;
+        }
+
+        private void OnInputEnabledChanged(bool enable)
+        {
+            enabled = enable;
         }
     }
 }
