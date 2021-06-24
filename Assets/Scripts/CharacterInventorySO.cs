@@ -12,12 +12,12 @@ namespace Game
         [SerializeField] private List<StringConstant> _equipSlots = new List<StringConstant>();
         
         [Tooltip("Drag ItemSOs to set as initial inventory contents here")]
-        [SerializeField] private List<ItemSO> _inventory = new List<ItemSO>();
+        [SerializeField] private List<ItemSO> _inventoryItems = new List<ItemSO>();
         
         [Tooltip("Drag ItemSOs to set as initial equipped items here (must exist in inventory and be equippable)")]
         [SerializeField] private List<ItemSO> _equippedItems = new List<ItemSO>();
         
-        public IReadOnlyCollection<ItemSO> Items => _inventory.AsReadOnly();
+        public IReadOnlyCollection<ItemSO> Items => _inventoryItems.AsReadOnly();
 
         private void OnValidate()
         {
@@ -44,7 +44,7 @@ namespace Game
 
         public bool HasItem(ItemSO item)
         {
-            return _inventory.Contains(item);
+            return _inventoryItems.Contains(item);
         }
 
         public bool CanEquipItem(ItemSO item)
