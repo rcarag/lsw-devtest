@@ -9,12 +9,10 @@ namespace Game
     /// <summary>
     /// Based on https://youtu.be/rMCLWt1DuqI?t=1316
     /// </summary>
-    
     [RequireComponent(typeof(SpriteRenderer))]
     public class ReskinAnimation : MonoBehaviour
     {
-        public Texture2D ReskinTexture;
-        public List<Sprite> ReskinSprites;
+        [SerializeField] private SpritesheetSO _spritesheet;
 
         // Set in Awake()
         private SpriteRenderer _spriteRenderer;
@@ -22,38 +20,24 @@ namespace Game
         private void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
-            
-            foreach (var sprite in ReskinSprites)
-            {
-                _spritesDict[sprite.name] = sprite;
-            }
         }
 
         private void LateUpdate()
         {
-            var spriteName = _spriteRenderer.sprite.name;
-            
-            if (!_spritesDict.ContainsKey(spriteName))
-                return;
-
-            _spriteRenderer.sprite = _spritesDict[spriteName];
+            ReskinSprite();
         }
 
-        private void OnValidate()
+        private void ReskinSprite()
         {
-            if (ReskinTexture == null)
+            if (_spritesheet == null)
                 return;
-            
-            string spritesheetPath = AssetDatabase.GetAssetPath(ReskinTexture);
-            
-            ReskinSprites.Clear();
 
-            var sprites = AssetDatabase.LoadAllAssetsAtPath(spritesheetPath)
-                .OfType<Sprite>();
+            var spriteName = _spriteRenderer.sprite.name;
 
-            ReskinSprites.AddRange(sprites);
+            if (_spritesheet.FindSprite(spriteName, out var reskinSprite))
+            {
+                _spriteRenderer.sprite = reskinSprite;
+            }
         }
-
-        private readonly Dictionary<string, Sprite> _spritesDict = new Dictionary<string, Sprite>();
     }
 }
