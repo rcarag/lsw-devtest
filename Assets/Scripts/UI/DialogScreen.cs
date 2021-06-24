@@ -17,8 +17,7 @@ namespace Game
 
         [Header("Events")]
         [SerializeField] private DialogSOEvent _dialogScreenOpenedEvent = null;
-        [SerializeField] private VoidEvent _dialogScreenPositiveEvent = null;
-        [SerializeField] private VoidEvent _dialogScreenNegativeEvent = null;
+        [SerializeField] private BoolEvent _dialogScreenNextEvent = null;
 
         private void Awake()
         {
@@ -42,12 +41,12 @@ namespace Game
         
         private void OnPositiveButtonPressed()
         {
-            _dialogScreenPositiveEvent.Raise();
+            _dialogScreenNextEvent.Raise(true);
         }
 
         private void OnNegativeButtonPressed()
         {
-            _dialogScreenNegativeEvent.Raise();
+            _dialogScreenNextEvent.Raise(false);
         }
     }
 }

@@ -1441,8 +1441,7 @@ MonoBehaviour:
   _positiveButtonText: {fileID: 574991351}
   _negativeButtonText: {fileID: 1946603966}
   _dialogScreenOpenedEvent: {fileID: 11400000, guid: 08ea60c8228ef430fbb709d25112a13f, type: 2}
-  _dialogScreenPositiveEvent: {fileID: 11400000, guid: 6eb5663ec68784811a58aa86b4102fab, type: 2}
-  _dialogScreenNegativeEvent: {fileID: 11400000, guid: 4450badcc932445b1883b91e3ba36193, type: 2}
+  _dialogScreenNextEvent: {fileID: 11400000, guid: ee57b12a08c27419285298db519867db, type: 2}
 --- !u!1 &1445169080
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _developerDescription: 
   _replayBufferSize: 1
-  _inspectorRaiseValue: {fileID: 11400000, guid: c119c5273aacc444694db400868a9cd2, type: 2}
+  _inspectorRaiseValue: {fileID: 11400000, guid: 72622fba07f2745ec80f274ad524b34a, type: 2}
