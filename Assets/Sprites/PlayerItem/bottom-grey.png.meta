@@ -89,7 +89,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: character-spritesheet_0
+      name: down0
       rect:
         serializedVersion: 2
         x: 0
@@ -110,7 +110,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-spritesheet_1
+      name: down1
       rect:
         serializedVersion: 2
         x: 16
@@ -131,7 +131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-spritesheet_2
+      name: down2
       rect:
         serializedVersion: 2
         x: 32
@@ -152,7 +152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-spritesheet_3
+      name: down3
       rect:
         serializedVersion: 2
         x: 48
@@ -173,7 +173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-spritesheet_4
+      name: up0
       rect:
         serializedVersion: 2
         x: 0
@@ -194,7 +194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-spritesheet_5
+      name: up1
       rect:
         serializedVersion: 2
         x: 16
@@ -215,7 +215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-spritesheet_6
+      name: up2
       rect:
         serializedVersion: 2
         x: 32
@@ -236,7 +236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-spritesheet_7
+      name: up3
       rect:
         serializedVersion: 2
         x: 48
@@ -257,7 +257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-spritesheet_8
+      name: left0
       rect:
         serializedVersion: 2
         x: 0
@@ -278,7 +278,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-spritesheet_9
+      name: left1
       rect:
         serializedVersion: 2
         x: 16
@@ -299,7 +299,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-spritesheet_10
+      name: left2
       rect:
         serializedVersion: 2
         x: 32
@@ -320,7 +320,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-spritesheet_11
+      name: left3
       rect:
         serializedVersion: 2
         x: 48
@@ -341,7 +341,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-spritesheet_12
+      name: right0
       rect:
         serializedVersion: 2
         x: 0
@@ -362,7 +362,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-spritesheet_13
+      name: right1
       rect:
         serializedVersion: 2
         x: 16
@@ -383,7 +383,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-spritesheet_14
+      name: right2
       rect:
         serializedVersion: 2
         x: 32
@@ -404,7 +404,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character-spritesheet_15
+      name: right3
       rect:
         serializedVersion: 2
         x: 48

@@ -338,7 +338,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[0].m_Name
-    value: character-spritesheet_0
+    value: down0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[0].m_Rect.x
@@ -426,7 +426,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[1].m_Name
-    value: character-spritesheet_1
+    value: down1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[1].m_Rect.x
@@ -514,7 +514,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[2].m_Name
-    value: character-spritesheet_2
+    value: down2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[2].m_Rect.x
@@ -602,7 +602,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[3].m_Name
-    value: character-spritesheet_3
+    value: down3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[3].m_Rect.x
@@ -690,7 +690,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[4].m_Name
-    value: character-spritesheet_4
+    value: up0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[4].m_Rect.x
@@ -778,7 +778,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[5].m_Name
-    value: character-spritesheet_5
+    value: up1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[5].m_Rect.x
@@ -866,7 +866,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[6].m_Name
-    value: character-spritesheet_6
+    value: up2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[6].m_Rect.x
@@ -954,7 +954,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[7].m_Name
-    value: character-spritesheet_7
+    value: up3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[7].m_Rect.x
@@ -1042,7 +1042,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[8].m_Name
-    value: character-spritesheet_8
+    value: left0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[8].m_Rect.x
@@ -1130,7 +1130,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[9].m_Name
-    value: character-spritesheet_9
+    value: left1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[9].m_Rect.x
@@ -1218,7 +1218,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[10].m_Name
-    value: character-spritesheet_10
+    value: left2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[10].m_Rect.x
@@ -1306,7 +1306,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[11].m_Name
-    value: character-spritesheet_11
+    value: left3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[11].m_Rect.x
@@ -1394,7 +1394,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[12].m_Name
-    value: character-spritesheet_12
+    value: right0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[12].m_Rect.x
@@ -1482,7 +1482,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[13].m_Name
-    value: character-spritesheet_13
+    value: right1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[13].m_Rect.x
@@ -1570,7 +1570,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[14].m_Name
-    value: character-spritesheet_14
+    value: right2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[14].m_Rect.x
@@ -1658,7 +1658,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[15].m_Name
-    value: character-spritesheet_15
+    value: right3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SpriteSheet.m_Sprites.Array.data[15].m_Rect.x
