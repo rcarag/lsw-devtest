@@ -18,3 +18,4 @@ MonoBehaviour:
   _sellPrice: 2
   _requiredEquipSlots:
   - {fileID: 11400000, guid: 23b18028db8034a58b3ce4e50d0f1d5c, type: 2}
+  _characterSprite: {fileID: 11400000, guid: 25b57569d8fe04649bf4a04594215084, type: 2}

@@ -13,11 +13,14 @@ namespace Game
         [SerializeField] private int _buyPrice = 1;
         [SerializeField] private int _sellPrice = 1;
         [SerializeField] private List<StringConstant> _requiredEquipSlots = new List<StringConstant>();
+        [SerializeField] private CharacterSpriteSO _characterSprite = null;
 
         public string ItemName => _itemName;
         public Sprite Icon => _icon;
         public int BuyPrice => _buyPrice;
         public int SellPrice => _sellPrice;
         public IReadOnlyCollection<StringConstant> RequiredEquipSlots => _requiredEquipSlots.AsReadOnly();
+        public bool HasCharacterSprite => _characterSprite != null;
+        public CharacterSpriteSO CharacterSprite => _characterSprite;
     }
 }

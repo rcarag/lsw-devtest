@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
 
@@ -18,6 +19,7 @@ namespace Game
         [SerializeField] private List<ItemSO> _equippedItems = new List<ItemSO>();
         
         public IReadOnlyCollection<ItemSO> Items => _inventoryItems.AsReadOnly();
+        public IReadOnlyCollection<ItemSO> EquippedItems => _equippedItems.AsReadOnly();
 
         private void OnValidate()
         {
@@ -28,27 +30,29 @@ namespace Game
         {
             for (int i = _equippedItems.Count - 1; i >= 0; i--)
             {
-                if (!EquippedItemIsValid(_equippedItems[i]))
+                if (!CanEquipItem(_equippedItems[i]))
                 {
                     _equippedItems.RemoveAt(i);
                 }
             }
         }
 
-        private bool EquippedItemIsValid(ItemSO item)
+        public bool CanEquipItem(ItemSO item)
         {
-            if (item == null) return true;
-            
-            return HasItem(item) && CanEquipItem(item);
+            return HasItem(item) && HasAllRequiredEquipSlots(item);
         }
 
         public bool HasItem(ItemSO item)
         {
+            if (item == null) return false;
+            
             return _inventoryItems.Contains(item);
         }
 
-        public bool CanEquipItem(ItemSO item)
+        public bool HasAllRequiredEquipSlots(ItemSO item)
         {
+            if (item == null) return false;
+            
             foreach (var requiredSlot in item.RequiredEquipSlots)
             {
                 if (requiredSlot == null)
@@ -59,6 +63,16 @@ namespace Game
             }
 
             return true;
+        }
+
+        public bool TryEquipItem(ItemSO item)
+        {
+            if (!CanEquipItem(item))
+                return false;
+            
+            Debug.Log("Equipping item: " + item.ItemName);
+
+            throw new NotImplementedException();
         }
     }
 }

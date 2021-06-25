@@ -12,7 +12,7 @@ namespace Game
     [RequireComponent(typeof(SpriteRenderer))]
     public class ReskinAnimation : MonoBehaviour
     {
-        [SerializeField] private SpritesheetSO _spritesheet = null;
+        public SpritesheetSO Spritesheet = null;
 
         // Set in Awake()
         private SpriteRenderer _spriteRenderer;
@@ -29,12 +29,12 @@ namespace Game
 
         private void ReskinSprite()
         {
-            if (_spritesheet == null)
+            if (Spritesheet == null)
                 return;
 
             var spriteName = _spriteRenderer.sprite.name;
 
-            if (_spritesheet.FindSprite(spriteName, out var reskinSprite))
+            if (Spritesheet.FindSprite(spriteName, out var reskinSprite))
             {
                 _spriteRenderer.sprite = reskinSprite;
             }
