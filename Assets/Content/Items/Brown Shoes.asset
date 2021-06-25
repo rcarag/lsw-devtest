@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemName: Brown Shoes
   _icon: {fileID: -7246137212374382641, guid: b3c068736d3944060b004b6387d13ddc, type: 3}
-  _buyPrice: 10
-  _sellPrice: 2
+  _buyPrice: 100
+  _sellPrice: 10
   _requiredEquipSlots:
   - {fileID: 11400000, guid: f46b7dda4eed64722880daf47260da92, type: 2}
   _characterSprite: {fileID: 11400000, guid: 8bf77fc9cc3b049de8544f0a07658daa, type: 2}

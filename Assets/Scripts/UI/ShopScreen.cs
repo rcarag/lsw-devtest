@@ -18,6 +18,7 @@ namespace Game
         [Header("Events")]
         [SerializeField] private VoidEvent _shopScreenOpenedEvent = null;
         [SerializeField] private VoidEvent _shopScreenClosedEvent = null;
+        [SerializeField] private VoidEvent _shopTransactionOccurredEvent = null;
 
         [Header("Factories")]
         [SerializeField] private PrefabFactorySO _shopBuyButtonFactory = null;
@@ -30,6 +31,7 @@ namespace Game
         private void Awake()
         {
             _shopScreenOpenedEvent.Register(OnShopScreenOpened);
+            _shopTransactionOccurredEvent.Register(OnShopTransactionOccurred);
             
             _closeButton.onClick.AddListener(OnCloseButtonPressed);
         }
@@ -37,11 +39,13 @@ namespace Game
         private void OnDestroy()
         {
             _shopScreenOpenedEvent.Unregister(OnShopScreenOpened);
+            _shopTransactionOccurredEvent.Unregister(OnShopTransactionOccurred);
         }
 
         private void OnCloseButtonPressed()
         {
             _shopScreenClosedEvent.Raise();
+            ClearShopItems();
         }
 
         private void OnShopScreenOpened()
@@ -71,6 +75,31 @@ namespace Game
                     txButton.Initialize(item, ShopTransactionButton.TransactionType.Buy);
                 });
             }
+        }
+
+        private void ClearShopItems()
+        {
+            foreach (var child in _playerInventoryItemsGrid.GetComponentsInChildren<RectTransform>())
+            {
+                if (child == _playerInventoryItemsGrid)
+                    continue;
+                
+                Destroy(child.gameObject);
+            }
+            
+            foreach (var child in _shopInventoryItemsGrid.GetComponentsInChildren<RectTransform>())
+            {
+                if (child == _shopInventoryItemsGrid)
+                    continue;
+                
+                Destroy(child.gameObject);
+            }
+        }
+
+        private void OnShopTransactionOccurred()
+        {
+            ClearShopItems();
+            InitializeShopItems();
         }
     }
 

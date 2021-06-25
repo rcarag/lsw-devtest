@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemName: Grey Pants
   _icon: {fileID: 1913270061429338915, guid: bd108e70f96b540bcbcdb6dab8b11c28, type: 3}
-  _buyPrice: 10
-  _sellPrice: 2
+  _buyPrice: 300
+  _sellPrice: 30
   _requiredEquipSlots:
   - {fileID: 11400000, guid: 090631d18d57841b58dd0ac801867576, type: 2}
   _characterSprite: {fileID: 11400000, guid: 0a21c8140e1274e65b032f8d7854b71c, type: 2}

@@ -25,6 +25,7 @@ namespace Game
         private void Awake()
         {
             _button = GetComponent<Button>();
+            _button.onClick.AddListener(OnButtonPressed);
             _equippedItemsChangedEvent.Register(OnEquippedItemsChanged);
         }
 
@@ -65,6 +66,11 @@ namespace Game
         private void OnEquippedItemsChanged()
         {
             UpdateButton();
+        }
+
+        private void OnButtonPressed()
+        {
+            _inventory.TryUnequipSlot(_equipSlotTag, out _);
         }
     }
 }

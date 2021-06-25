@@ -110,5 +110,43 @@ namespace Game
             item = null;
             return false;
         }
+
+        public bool TryUnequipSlot(StringConstant equipSlot, out ItemSO item)
+        {
+            for (int i = _equippedItems.Count - 1; i >= 0; i--)
+            {
+                var equippedItem = _equippedItems[i];
+                
+                if (equippedItem.RequiredEquipSlots.Contains(equipSlot))
+                {
+                    Debug.Log("Unequipping item: " + equippedItem.ItemName);
+                    
+                    _equippedItems.RemoveAt(i);
+                    
+                    _equippedItemsChangedEvent.Raise();
+
+                    item = equippedItem;
+                    return true;
+                }
+            }
+
+            item = null; 
+            return false;
+        }
+
+        public void AddItem(ItemSO item)
+        {
+            _inventoryItems.Add(item);
+        }
+
+        public bool TryRemoveItem(ItemSO item)
+        {
+            if (!HasItem(item))
+                return false;
+
+            _inventoryItems.Remove(item);
+            
+            return true;
+        }
     }
 }

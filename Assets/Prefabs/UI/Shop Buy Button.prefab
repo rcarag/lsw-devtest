@@ -217,7 +217,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 5412175385426917704}
   m_OnClick:
     m_PersistentCalls:
@@ -236,6 +236,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _iconImage: {fileID: 5412175386283561376}
   _priceText: {fileID: 4898190553184542543}
+  _playerCoinsChangedEvent: {fileID: 11400000, guid: eaa4ee36e4bfd43e482138f0c69ab7ea, type: 2}
+  _shopTransactionOccurredEvent: {fileID: 11400000, guid: 13a28b0faa91c4853a266c493c4c7f51, type: 2}
+  _playerCoins: {fileID: 11400000, guid: c7cdf69133b8c4f4d9eca4fb2ec56951, type: 2}
+  _playerInventory: {fileID: 11400000, guid: 72b9053f022cd4f9886eab9b9c2d12c2, type: 2}
+  _shopInventory: {fileID: 11400000, guid: 79866addd7ced4a0ca4d49c6dec330b5, type: 2}
 --- !u!1 &5412175386283561382
 GameObject:
   m_ObjectHideFlags: 0

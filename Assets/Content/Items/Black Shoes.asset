@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemName: Black Shoes
   _icon: {fileID: -7246137212374382641, guid: 5ccf7aefb768e4e5ab7c2fe6564a8d0f, type: 3}
-  _buyPrice: 10
-  _sellPrice: 2
+  _buyPrice: 200
+  _sellPrice: 20
   _requiredEquipSlots:
   - {fileID: 11400000, guid: f46b7dda4eed64722880daf47260da92, type: 2}
   _characterSprite: {fileID: 11400000, guid: dc504da44d68b45d2965a5d0887938c0, type: 2}
