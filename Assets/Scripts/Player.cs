@@ -61,7 +61,23 @@ namespace Game
                 return false;
             
             Debug.Log("interact");
-            return true;
+
+            var hits = Physics2D.RaycastAll(transform.position, _controller.MoveDirection.AsVector2(), 2);
+
+            Debug.DrawRay(transform.position, _controller.MoveDirection.AsVector2() * 2, Color.green, 1);
+
+            foreach (var hit in hits)
+            {
+                var interactable = hit.collider.gameObject.GetComponent<Interactable>();
+
+                if (interactable == null)
+                    continue;
+            
+                interactable.InteractAction.Do();
+                return true;
+            }
+            
+            return false;
         }
 
         private bool HandleOpenInventoryAction()
