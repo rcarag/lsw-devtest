@@ -28,7 +28,7 @@ namespace Game
                     {
                         instance.name = "Character Sprite: " + item.ItemName;
                         var characterSpriteFacade = instance.GetComponent<CharacterSprite>();
-                        characterSpriteFacade.Initialize(_baseSpriteRenderer, item.CharacterSprite);
+                        characterSpriteFacade.Initialize(_baseSpriteRenderer, item);
                         
                         _graphics.Add(instance);
                     });

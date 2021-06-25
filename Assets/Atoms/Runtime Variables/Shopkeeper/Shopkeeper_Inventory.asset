@@ -14,8 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _equipSlots: []
   _inventoryItems:
-  - {fileID: 11400000, guid: a6aa54f2a13a2429196ddd3a9cb4395b, type: 2}
   - {fileID: 11400000, guid: 867560238a897411181cbbcdbb38652c, type: 2}
+  - {fileID: 11400000, guid: 96ac0dd5959284fc59296a0af767c910, type: 2}
+  - {fileID: 11400000, guid: ece6ce5346edc42beac6cdc67237a774, type: 2}
+  - {fileID: 11400000, guid: a6aa54f2a13a2429196ddd3a9cb4395b, type: 2}
+  - {fileID: 11400000, guid: 8ef47fc223e8a44bf8c0715243f74e7a, type: 2}
+  - {fileID: 11400000, guid: 0394c9fef88264a24a5855ad6d4d3131, type: 2}
   - {fileID: 11400000, guid: 6edf12fe19a664ca89f58e5fec3c39e8, type: 2}
+  - {fileID: 11400000, guid: e0fd8eafb4ad2464bbe4d2be9e05c6e5, type: 2}
+  - {fileID: 11400000, guid: a5cc3f3417a1948a2b0839e791a403b1, type: 2}
   _equippedItems: []
   _equippedItemsChangedEvent: {fileID: 0}

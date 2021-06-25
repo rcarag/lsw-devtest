@@ -11,6 +11,9 @@ namespace Game
         [Header("Events")]
         [SerializeField] private BoolEvent _inputEnabledChangedEvent = null;
         [SerializeField] VoidEvent _inventoryScreenOpenedEvent = null;
+
+        [Header("Handlers")]
+        [SerializeField] private InteractHandler _interactHandler = new InteractHandler();
         
         // Set in Awake()
         private GameControls _controls;
@@ -62,22 +65,7 @@ namespace Game
             
             Debug.Log("interact");
 
-            var hits = Physics2D.RaycastAll(transform.position, _controller.MoveDirection.AsVector2(), 2);
-
-            Debug.DrawRay(transform.position, _controller.MoveDirection.AsVector2() * 2, Color.green, 1);
-
-            foreach (var hit in hits)
-            {
-                var interactable = hit.collider.gameObject.GetComponent<Interactable>();
-
-                if (interactable == null)
-                    continue;
-            
-                interactable.InteractAction.Do();
-                return true;
-            }
-            
-            return false;
+            return _interactHandler.Interact(_controller.MoveDirection);
         }
 
         private bool HandleOpenInventoryAction()

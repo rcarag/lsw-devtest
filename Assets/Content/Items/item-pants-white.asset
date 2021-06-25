@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb22375f76e9a48d88d7554c2610f492, type: 3}
+  m_Name: item-pants-white
+  m_EditorClassIdentifier: 
+  _itemName: Blue Pants
+  _icon: {fileID: -6845893548279292754, guid: 8461396f84abc4ba482de47b45c327f3, type: 3}
+  _buyPrice: 200
+  _sellPrice: 20
+  _requiredEquipSlots:
+  - {fileID: 11400000, guid: 090631d18d57841b58dd0ac801867576, type: 2}
+  _characterSpritesheet: {fileID: 11400000, guid: f161d1c8d47cc4634acdafc6ab88b9af, type: 2}
+  _characterSpriteSortingLayer: 5
