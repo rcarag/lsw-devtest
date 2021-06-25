@@ -4286,6 +4286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _closeButton: {fileID: 801259843}
   _inventoryItemGrid: {fileID: 1819812201}
+  _inventoryScreenOpenedEvent: {fileID: 11400000, guid: a986974db9dc14ebc893f5f11475649e, type: 2}
   _inventoryScreenClosedEvent: {fileID: 11400000, guid: ca70b9ff4466341c6b9770a9a1e60d6d, type: 2}
   _inventory: {fileID: 11400000, guid: 72b9053f022cd4f9886eab9b9c2d12c2, type: 2}
   _inventoryItemButtonFactory: {fileID: 11400000, guid: 7e8c9100351d84f4882a147b952cdd67, type: 2}

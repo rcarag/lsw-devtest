@@ -23,14 +23,20 @@ namespace Game
             _closeButton.onClick.AddListener(OnCloseButtonPressed);
         }
 
-        private void Start()
+        private void OnCloseButtonPressed()
+        {
+            _inventoryScreenClosedEvent.Raise();
+            ClearInventoryItems();
+        }
+
+        private void OnEnable()
         {
             InitializeInventoryItems();
         }
 
-        private void OnCloseButtonPressed()
+        private void OnDisable()
         {
-            _inventoryScreenClosedEvent.Raise();
+            ClearInventoryItems();
         }
 
         private void InitializeInventoryItems()
@@ -43,6 +49,17 @@ namespace Game
                         InventoryItemButton inventoryItemButton = instance.GetComponent<InventoryItemButton>();
                         inventoryItemButton.Initialize(item);
                     });
+            }
+        }
+
+        private void ClearInventoryItems()
+        {
+            foreach (var child in _inventoryItemGrid.GetComponentsInChildren<RectTransform>())
+            {
+                if (child == _inventoryItemGrid)
+                    continue;
+                
+                Destroy(child.gameObject);
             }
         }
     }
