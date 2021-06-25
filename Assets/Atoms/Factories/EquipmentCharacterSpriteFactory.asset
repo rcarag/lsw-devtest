@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0635ac2f70594bd3a31a5ced16469dc, type: 3}
-  m_Name: Player_InputEnabled_Changed
+  m_Script: {fileID: 11500000, guid: 578fa41cace66435088978aba3103e28, type: 3}
+  m_Name: EquipmentCharacterSpriteFactory
   m_EditorClassIdentifier: 
-  _developerDescription: 
-  _replayBufferSize: 0
-  _inspectorRaiseValue: 0
+  _prefab: {fileID: 5157654991769725950, guid: 75c49d3328652428888a10520b689d70, type: 3}

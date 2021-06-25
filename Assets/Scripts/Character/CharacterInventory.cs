@@ -12,12 +12,30 @@ namespace Game
         
         [SerializeField] private CharacterCustomizationHandler _customizationHandler = new CharacterCustomizationHandler();
 
+        [Header("Events")]
+        [SerializeField] private VoidEvent _equippedItemsChangedEvent;
+
+        private void Awake()
+        {
+            _equippedItemsChangedEvent.Register(OnEquippedItemsChanged);
+        }
+
+        private void OnDestroy()
+        {
+            _equippedItemsChangedEvent.Unregister(OnEquippedItemsChanged);
+        }
+
         private void Start()
         {
             InitializeCharacterItems();
         }
 
         private void InitializeCharacterItems()
+        {
+            _customizationHandler.WearAll(Inventory.EquippedItems);
+        }
+
+        private void OnEquippedItemsChanged()
         {
             _customizationHandler.WearAll(Inventory.EquippedItems);
         }

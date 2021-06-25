@@ -15,8 +15,9 @@ namespace Game
             _reskinAnimation = GetComponent<ReskinAnimation>();
         }
 
-        public void Initialize(CharacterSpriteSO characterSprite)
+        public void Initialize(SpriteRenderer referenceSprite, CharacterSpriteSO characterSprite)
         {
+            _reskinAnimation.ReferenceSprite = referenceSprite;
             _reskinAnimation.Spritesheet = characterSprite.Spritesheet;
             _spriteRenderer.sortingOrder = characterSprite.SortingOrder;
         }

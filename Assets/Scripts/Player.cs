@@ -78,6 +78,7 @@ namespace Game
         private void HandleMoveInput()
         {
             var _moveInput = _controls.Player.Movement.ReadValue<Vector2>();
+            Debug.Log(_moveInput);
 
             if (_moveInput == Vector2.zero)
                 _controller.MoveDirection = MoveDirection.None;

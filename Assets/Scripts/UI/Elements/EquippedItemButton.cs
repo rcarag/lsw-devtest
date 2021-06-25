@@ -15,6 +15,9 @@ namespace Game
 
         [Header("UI Elements")]
         [SerializeField] private Image _itemIcon;
+
+        [Header("Events")]
+        [SerializeField] private VoidEvent _equippedItemsChangedEvent;
         
         // Set in Awake()
         private Button _button;
@@ -22,6 +25,46 @@ namespace Game
         private void Awake()
         {
             _button = GetComponent<Button>();
+            _equippedItemsChangedEvent.Register(OnEquippedItemsChanged);
+        }
+
+        private void Start()
+        {
+            UpdateButton();
+        }
+
+        private void OnDestroy()
+        {
+            _equippedItemsChangedEvent.Unregister(OnEquippedItemsChanged);
+        }
+
+        private void UpdateButton()
+        {
+            if (_inventory.TryGetEquippedItem(_equipSlotTag, out var item))
+            {
+                SetEquippedItem(item);
+                return;
+            }
+            
+            SetUnequipped();
+        }
+
+        private void SetEquippedItem(ItemSO item)
+        {
+            _button.interactable = true;
+            _itemIcon.enabled = true;
+            _itemIcon.sprite = item.Icon;
+        }
+
+        private void SetUnequipped()
+        {
+            _button.interactable = false;
+            _itemIcon.enabled = false;
+        }
+
+        private void OnEquippedItemsChanged()
+        {
+            UpdateButton();
         }
     }
 }

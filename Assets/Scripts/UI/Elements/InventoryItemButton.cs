@@ -10,6 +10,9 @@ namespace Game
     public class InventoryItemButton : MonoBehaviour
     {
         [SerializeField] private CharacterInventorySO _inventory = null;
+
+        [Header("UI Elements")]
+        [SerializeField] private Image _icon = null;
         
         // Set in Awake
         private Button _button = null;
@@ -26,6 +29,7 @@ namespace Game
         public void Initialize(ItemSO item)
         {
             _item = item;
+            _icon.sprite = item.Icon;
         }
 
         private void OnButtonPressed()

@@ -32,12 +32,21 @@ namespace Game
             if (Spritesheet == null)
                 return;
 
-            var spriteName = _spriteRenderer.sprite.name;
+            var spriteName = ReferenceSprite.sprite.name;
 
             if (Spritesheet.FindSprite(spriteName, out var reskinSprite))
             {
                 _spriteRenderer.sprite = reskinSprite;
             }
+        }
+
+        private SpriteRenderer _otherSpriteRenderer = null;
+
+        public SpriteRenderer ReferenceSprite
+        {
+            get => _otherSpriteRenderer == null ? _spriteRenderer : _otherSpriteRenderer;
+
+            set => _otherSpriteRenderer = value;
         }
     }
 }

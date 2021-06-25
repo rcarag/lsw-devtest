@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6120880405768469217}
   - component: {fileID: 6946493622005082219}
   m_Layer: 5
-  m_Name: Inventory Item Button Prefab
+  m_Name: Inventory Item Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventory: {fileID: 11400000, guid: 72b9053f022cd4f9886eab9b9c2d12c2, type: 2}
+  _icon: {fileID: 5412175386283561376}
 --- !u!1 &5412175386283561382
 GameObject:
   m_ObjectHideFlags: 0
