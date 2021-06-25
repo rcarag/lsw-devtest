@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6de5fb1ae8c94449290d35f5c28a6fd9
+guid: beb6986005a724430a8444b5725d2957
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Fredoka One
+  - Edit Undo BRK
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

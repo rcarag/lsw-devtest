@@ -588,17 +588,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6de5fb1ae8c94449290d35f5c28a6fd9, type: 3}
-    m_FontSize: 16
+    m_Font: {fileID: 12800000, guid: beb6986005a724430a8444b5725d2957, type: 3}
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Button
 --- !u!222 &574991352
@@ -1347,8 +1347,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 10
-    m_Right: 10
+    m_Left: 20
+    m_Right: 20
     m_Top: 10
     m_Bottom: 10
   m_ChildAlignment: 0
@@ -1430,7 +1430,7 @@ RectTransform:
   m_Children:
   - {fileID: 2030566846}
   m_Father: {fileID: 1792483814}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -1765,8 +1765,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6de5fb1ae8c94449290d35f5c28a6fd9, type: 3}
-    m_FontSize: 16
+    m_Font: {fileID: 12800000, guid: beb6986005a724430a8444b5725d2957, type: 3}
+    m_FontSize: 24
     m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 0
@@ -1872,7 +1872,7 @@ GameObject:
   - component: {fileID: 1178426377}
   - component: {fileID: 1178426376}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Coins Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1890,7 +1890,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1792483814}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1918,8 +1918,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6de5fb1ae8c94449290d35f5c28a6fd9, type: 3}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: beb6986005a724430a8444b5725d2957, type: 3}
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2056,8 +2056,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6de5fb1ae8c94449290d35f5c28a6fd9, type: 3}
-    m_FontSize: 16
+    m_Font: {fileID: 12800000, guid: beb6986005a724430a8444b5725d2957, type: 3}
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2433,7 +2433,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6de5fb1ae8c94449290d35f5c28a6fd9, type: 3}
+    m_Font: {fileID: 12800000, guid: beb6986005a724430a8444b5725d2957, type: 3}
     m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
@@ -2635,7 +2635,7 @@ RectTransform:
   - {fileID: 1819812201}
   - {fileID: 1238627483}
   m_Father: {fileID: 1792483814}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2681,9 +2681,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1178426375}
   - {fileID: 801259842}
   - {fileID: 1594457436}
-  - {fileID: 1178426375}
   m_Father: {fileID: 2142873583}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3081,17 +3081,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6de5fb1ae8c94449290d35f5c28a6fd9, type: 3}
-    m_FontSize: 16
+    m_Font: {fileID: 12800000, guid: beb6986005a724430a8444b5725d2957, type: 3}
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Button
 --- !u!222 &1946603967
@@ -3237,7 +3237,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6de5fb1ae8c94449290d35f5c28a6fd9, type: 3}
+    m_Font: {fileID: 12800000, guid: beb6986005a724430a8444b5725d2957, type: 3}
     m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
