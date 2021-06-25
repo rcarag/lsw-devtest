@@ -22,7 +22,7 @@ namespace Game
             ""actions"": [
                 {
                     ""name"": ""Movement"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""1aa03955-48c2-44a0-8984-73d5ce5f6b43"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
