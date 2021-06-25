@@ -34,6 +34,11 @@ namespace Game
             _text = GetComponent<Text>();
         }
 
+        private void Start()
+        {
+            SetText(_value.Value);
+        }
+
         public void SetText(int value)
         {
             TextComponent.text = $"{_prefix.Value}{value}";

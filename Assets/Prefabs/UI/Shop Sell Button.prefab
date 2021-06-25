@@ -9,16 +9,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4898190553184542543, guid: b8b35e6762ee341598c1b8435fb03575, type: 3}
       propertyPath: m_Color.r
-      value: 0.42745098
+      value: 0.9960785
       objectReference: {fileID: 0}
     - target: {fileID: 4898190553184542543, guid: b8b35e6762ee341598c1b8435fb03575, type: 3}
       propertyPath: m_Color.g
-      value: 0.83137256
+      value: 0.8000001
       objectReference: {fileID: 0}
     - target: {fileID: 4898190553184542543, guid: b8b35e6762ee341598c1b8435fb03575, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.003921569
       objectReference: {fileID: 0}
+    - target: {fileID: 5412175385426917704, guid: b8b35e6762ee341598c1b8435fb03575, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cbde5dfa2afbc4c8ca88b14594aa3362, type: 3}
     - target: {fileID: 5412175385426917710, guid: b8b35e6762ee341598c1b8435fb03575, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -106,6 +110,18 @@ PrefabInstance:
     - target: {fileID: 5412175385426917711, guid: b8b35e6762ee341598c1b8435fb03575, type: 3}
       propertyPath: m_Name
       value: Shop Sell Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 7620452564290288661, guid: b8b35e6762ee341598c1b8435fb03575, type: 3}
+      propertyPath: m_EffectColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7620452564290288661, guid: b8b35e6762ee341598c1b8435fb03575, type: 3}
+      propertyPath: m_EffectColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7620452564290288661, guid: b8b35e6762ee341598c1b8435fb03575, type: 3}
+      propertyPath: m_EffectColor.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8b35e6762ee341598c1b8435fb03575, type: 3}
