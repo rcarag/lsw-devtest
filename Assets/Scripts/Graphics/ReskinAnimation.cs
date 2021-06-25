@@ -13,6 +13,8 @@ namespace Game
     public class ReskinAnimation : MonoBehaviour
     {
         public SpritesheetSO Spritesheet = null;
+        
+        [SerializeField] private SpriteRenderer _referenceSpriteRenderer = null;
 
         // Set in Awake()
         private SpriteRenderer _spriteRenderer;
@@ -40,13 +42,11 @@ namespace Game
             }
         }
 
-        private SpriteRenderer _otherSpriteRenderer = null;
-
         public SpriteRenderer ReferenceSprite
         {
-            get => _otherSpriteRenderer == null ? _spriteRenderer : _otherSpriteRenderer;
+            get => _referenceSpriteRenderer == null ? _spriteRenderer : _referenceSpriteRenderer;
 
-            set => _otherSpriteRenderer = value;
+            set => _referenceSpriteRenderer = value;
         }
     }
 }
