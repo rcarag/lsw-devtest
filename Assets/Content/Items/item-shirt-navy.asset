@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemName: Blue Shirt
   _icon: {fileID: -8956286709306194574, guid: 8461396f84abc4ba482de47b45c327f3, type: 3}
-  _buyPrice: 150
-  _sellPrice: 15
+  _buyPrice: 125
+  _sellPrice: 12
   _requiredEquipSlots:
   - {fileID: 11400000, guid: 23b18028db8034a58b3ce4e50d0f1d5c, type: 2}
   _characterSpritesheet: {fileID: 11400000, guid: 4c806fde9e5944e51a00a793726ff28c, type: 2}

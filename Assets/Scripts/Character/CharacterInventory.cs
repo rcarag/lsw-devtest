@@ -13,7 +13,7 @@ namespace Game
         [SerializeField] private CharacterCustomizationHandler _customizationHandler = new CharacterCustomizationHandler();
 
         [Header("Events")]
-        [SerializeField] private VoidEvent _equippedItemsChangedEvent;
+        [SerializeField] private VoidEvent _equippedItemsChangedEvent = null;
 
         private void Awake()
         {

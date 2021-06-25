@@ -9,8 +9,10 @@ namespace Game
     [CreateAssetMenu(menuName = "Game/SpritesheetSO")]
     public class SpritesheetSO : ScriptableObject
     {
+#if UNITY_EDITOR
         [Header("Set in Inspector")]
         [SerializeField] private Texture2D _spritesheet = null;
+#endif
 
         [Header("For Debug Only")]
         [ReadOnly] public List<Sprite> Sprites = new List<Sprite>();
@@ -27,6 +29,7 @@ namespace Game
 
         private void LoadSpritesFromTexture()
         {
+#if UNITY_EDITOR
             Sprites.Clear();
             
             if (_spritesheet == null)
@@ -38,6 +41,7 @@ namespace Game
                 .OfType<Sprite>();
 
             Sprites.AddRange(sprites);
+#endif
         }
 
         private void InitializeSpriteDictionary()

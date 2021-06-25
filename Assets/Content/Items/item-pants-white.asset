@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemName: Blue Pants
   _icon: {fileID: -6845893548279292754, guid: 8461396f84abc4ba482de47b45c327f3, type: 3}
-  _buyPrice: 200
-  _sellPrice: 20
+  _buyPrice: 150
+  _sellPrice: 15
   _requiredEquipSlots:
   - {fileID: 11400000, guid: 090631d18d57841b58dd0ac801867576, type: 2}
   _characterSpritesheet: {fileID: 11400000, guid: f161d1c8d47cc4634acdafc6ab88b9af, type: 2}

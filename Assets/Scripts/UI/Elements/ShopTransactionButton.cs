@@ -28,12 +28,12 @@ namespace Game
         {
             _button = GetComponent<Button>();
             _button.onClick.AddListener(OnButtonPressed);
-            _playerCoinsChangedEvent.Register(UpdateBuyableStatus);
+            _playerCoinsChangedEvent.Register(UpdateInteractableStatus);
         }
 
         private void OnDestroy()
         {
-            _playerCoinsChangedEvent.Unregister(UpdateBuyableStatus);
+            _playerCoinsChangedEvent.Unregister(UpdateInteractableStatus);
         }
 
         // Set in Initialize()
@@ -51,7 +51,7 @@ namespace Game
 
         private void Start()
         {
-            UpdateBuyableStatus();
+            UpdateInteractableStatus();
         }
 
         private int GetPrice()
@@ -65,7 +65,7 @@ namespace Game
             throw new NotImplementedException();
         }
 
-        private void UpdateBuyableStatus()
+        private void UpdateInteractableStatus()
         {
             if (_transactionType == TransactionType.Sell)
             {
@@ -78,6 +78,8 @@ namespace Game
                 _button.interactable = _playerCoins.Value >= GetPrice();
                 return;
             }
+
+            throw new NotImplementedException();
         }
 
         private void OnButtonPressed()
