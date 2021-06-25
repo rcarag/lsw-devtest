@@ -6,7 +6,7 @@ namespace Game
     [Serializable]
     public class CharacterAnimationHandler
     {
-        [SerializeField] private Animator _animator;
+        [SerializeField] private Animator _animator = null;
         
         public MoveDirection FacingDirection { get; private set; }
 

@@ -14,7 +14,7 @@ namespace Game
 
         [Header("Handlers")]
         [SerializeField] private InteractHandler _interactHandler = new InteractHandler();
-        [SerializeField] private CharacterAnimationHandler _animationHandler;
+        [SerializeField] private CharacterAnimationHandler _animationHandler = new CharacterAnimationHandler();
         
         // Set in Awake()
         private GameControls _controls;

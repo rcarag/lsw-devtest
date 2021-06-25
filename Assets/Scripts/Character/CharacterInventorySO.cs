@@ -19,7 +19,8 @@ namespace Game
         [Tooltip("Drag ItemSOs to set as initial equipped items here (must exist in inventory and be equippable)")]
         [SerializeField] private List<ItemSO> _equippedItems = new List<ItemSO>();
 
-        [Header("Events")] [SerializeField] private VoidEvent _equippedItemsChangedEvent;
+        [Header("Events")]
+        [SerializeField] private VoidEvent _equippedItemsChangedEvent = null;
         
         public IReadOnlyCollection<ItemSO> Items => _inventoryItems.AsReadOnly();
         public IReadOnlyCollection<ItemSO> EquippedItems => _equippedItems.AsReadOnly();
@@ -50,6 +51,11 @@ namespace Game
             if (item == null) return false;
             
             return _inventoryItems.Contains(item);
+        }
+
+        public bool IsEquipped(ItemSO item)
+        {
+            return _equippedItems.Contains(item);
         }
 
         public bool HasAllRequiredEquipSlots(ItemSO item)

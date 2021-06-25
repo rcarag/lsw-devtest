@@ -12,11 +12,10 @@ namespace Game
     {
         [Header("UI Elements")]
         [SerializeField] private Button _closeButton = null;
-        [SerializeField] private RectTransform _playerInventoryItemsGrid;
-        [SerializeField] private RectTransform _shopInventoryItemsGrid;
+        [SerializeField] private RectTransform _playerInventoryItemsGrid = null;
+        [SerializeField] private RectTransform _shopInventoryItemsGrid = null;
 
         [Header("Events")]
-        [SerializeField] private VoidEvent _shopScreenOpenedEvent = null;
         [SerializeField] private VoidEvent _shopScreenClosedEvent = null;
         [SerializeField] private VoidEvent _shopTransactionOccurredEvent = null;
 
@@ -30,7 +29,6 @@ namespace Game
         
         private void Awake()
         {
-            _shopScreenOpenedEvent.Register(OnShopScreenOpened);
             _shopTransactionOccurredEvent.Register(OnShopTransactionOccurred);
             
             _closeButton.onClick.AddListener(OnCloseButtonPressed);
@@ -38,19 +36,23 @@ namespace Game
 
         private void OnDestroy()
         {
-            _shopScreenOpenedEvent.Unregister(OnShopScreenOpened);
             _shopTransactionOccurredEvent.Unregister(OnShopTransactionOccurred);
+        }
+
+        private void OnEnable()
+        {
+            InitializeShopItems();
+        }
+
+        private void OnDisable()
+        {
+            ClearShopItems();
         }
 
         private void OnCloseButtonPressed()
         {
             _shopScreenClosedEvent.Raise();
             ClearShopItems();
-        }
-
-        private void OnShopScreenOpened()
-        {
-            InitializeShopItems();
         }
 
         private void InitializeShopItems()

@@ -10,17 +10,17 @@ namespace Game
     [RequireComponent(typeof(Button))]
     public class EquippedItemButton : MonoBehaviour
     {
-        [SerializeField] private CharacterInventorySO _inventory;
-        [SerializeField] private StringConstant _equipSlotTag;
+        [SerializeField] private CharacterInventorySO _inventory = null;
+        [SerializeField] private StringConstant _equipSlotTag = null;
 
         [Header("UI Elements")]
-        [SerializeField] private Image _itemIcon;
+        [SerializeField] private Image _itemIcon = null;
 
         [Header("Events")]
-        [SerializeField] private VoidEvent _equippedItemsChangedEvent;
+        [SerializeField] private VoidEvent _equippedItemsChangedEvent = null;
         
         // Set in Awake()
-        private Button _button;
+        private Button _button = null;
         
         private void Awake()
         {

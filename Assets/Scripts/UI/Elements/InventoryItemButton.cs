@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace Game
@@ -9,10 +6,16 @@ namespace Game
     [RequireComponent(typeof(Button))]
     public class InventoryItemButton : MonoBehaviour
     {
-        [SerializeField] private CharacterInventorySO _inventory = null;
-
         [Header("UI Elements")]
         [SerializeField] private Image _icon = null;
+        [SerializeField] private Image _buttonImage = null;
+
+        [Header("Graphics")]
+        [SerializeField] private Sprite _unequippedButtonSprite = null;
+        [SerializeField] private Sprite _equippedButtonSprite = null;
+        
+        [Header("Model")]
+        [SerializeField] private CharacterInventorySO _inventory = null;
         
         // Set in Awake
         private Button _button = null;
@@ -30,6 +33,10 @@ namespace Game
         {
             _item = item;
             _icon.sprite = item.Icon;
+            
+            _buttonImage.sprite = _inventory.IsEquipped(item)
+                ? _equippedButtonSprite
+                : _unequippedButtonSprite;
         }
 
         private void OnButtonPressed()

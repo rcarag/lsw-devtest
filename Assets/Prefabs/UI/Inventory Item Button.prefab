@@ -154,8 +154,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a6fbf003e3ac4ad0ad4b6c4479ba052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inventory: {fileID: 11400000, guid: 72b9053f022cd4f9886eab9b9c2d12c2, type: 2}
   _icon: {fileID: 5412175386283561376}
+  _buttonImage: {fileID: 5412175385426917704}
+  _unequippedButtonSprite: {fileID: 21300000, guid: f9851de4310a54a84821f2bdc36495ed, type: 3}
+  _equippedButtonSprite: {fileID: 21300000, guid: 367b67a09b10c41e99fa619fdb4a7e97, type: 3}
+  _inventory: {fileID: 11400000, guid: 72b9053f022cd4f9886eab9b9c2d12c2, type: 2}
 --- !u!1 &5412175386283561382
 GameObject:
   m_ObjectHideFlags: 0

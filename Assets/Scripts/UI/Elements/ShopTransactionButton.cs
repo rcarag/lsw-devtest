@@ -15,13 +15,13 @@ namespace Game
         [SerializeField] private Text _priceText = null;
 
         [Header("Events")]
-        [SerializeField] private IntEvent _playerCoinsChangedEvent;
-        [SerializeField] private VoidEvent _shopTransactionOccurredEvent;
+        [SerializeField] private IntEvent _playerCoinsChangedEvent = null;
+        [SerializeField] private VoidEvent _shopTransactionOccurredEvent = null;
         
         [Header("Model")]
-        [SerializeField] private IntVariable _playerCoins;
-        [SerializeField] private CharacterInventorySO _playerInventory;
-        [SerializeField] private CharacterInventorySO _shopInventory;
+        [SerializeField] private IntVariable _playerCoins = null;
+        [SerializeField] private CharacterInventorySO _playerInventory = null;
+        [SerializeField] private CharacterInventorySO _shopInventory = null;
 
         private Button _button;
         private void Awake()

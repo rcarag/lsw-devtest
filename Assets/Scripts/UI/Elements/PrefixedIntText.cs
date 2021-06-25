@@ -10,8 +10,8 @@ namespace Game
     [RequireComponent(typeof(Text))]
     public class PrefixedIntText : MonoBehaviour
     {
-        [SerializeField] private StringConstant _prefix;
-        [SerializeField] private IntVariable _value;
+        [SerializeField] private StringConstant _prefix = null;
+        [SerializeField] private IntVariable _value = null;
         
         // Set in Awake()
         private Text _text;

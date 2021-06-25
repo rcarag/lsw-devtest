@@ -10,9 +10,11 @@ namespace Game
     {
         [SerializeField] private PrefabFactorySO _characterSpriteFactory = null;
 
+        [Tooltip("When equipment sprites are created, they will be instantiated as a child of this Transform.")]
         [SerializeField] private Transform _characterSpriteParent = null;
 
-        [SerializeField] private SpriteRenderer _baseSpriteRenderer;
+        [Tooltip("Set to the SpriteRenderer that will be used as the reference for the current animation frame.")]
+        [SerializeField] private SpriteRenderer _baseSpriteRenderer = null;
 
         public void WearAll(IReadOnlyCollection<ItemSO> equippedItems)
         {
