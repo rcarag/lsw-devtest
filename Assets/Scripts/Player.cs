@@ -14,6 +14,7 @@ namespace Game
 
         [Header("Handlers")]
         [SerializeField] private InteractHandler _interactHandler = new InteractHandler();
+        [SerializeField] private CharacterAnimationHandler _animationHandler;
         
         // Set in Awake()
         private GameControls _controls;
@@ -46,16 +47,22 @@ namespace Game
         private void Update()
         {
             HandleMoveInput();
-            HandlePlayerActions();
+            
+            _animationHandler.Move(_controller.MoveDirection);
+
+            if (HandlePlayerActions())
+                _animationHandler.Move(MoveDirection.None);
         }
 
-        private void HandlePlayerActions()
+        private bool HandlePlayerActions()
         {
             if (HandleOpenInventoryAction())
-                return;
+                return true;
 
             if (HandleInteractAction())
-                return;
+                return true;
+
+            return false;
         }
 
         private bool HandleInteractAction()
@@ -65,7 +72,7 @@ namespace Game
             
             Debug.Log("interact");
 
-            return _interactHandler.Interact(_controller.MoveDirection);
+            return _interactHandler.Interact(_animationHandler.FacingDirection);
         }
 
         private bool HandleOpenInventoryAction()

@@ -563,7 +563,9 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 1
     _raycastOrigin: {fileID: 18204473}
-    _raycastDistance: 2
+    _raycastDistance: 1
+  _animationHandler:
+    _animator: {fileID: 1718529791}
 --- !u!50 &182390921
 Rigidbody2D:
   serializedVersion: 4
@@ -3310,6 +3312,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -20}
   m_SizeDelta: {x: 0, y: -40}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1718529791 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5157654991769725951, guid: a0f319f17a2cb4c5db96000b23cfb108, type: 3}
+  m_PrefabInstance: {fileID: 5157654990186792192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!212 &1718529792 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 5157654991769725440, guid: a0f319f17a2cb4c5db96000b23cfb108, type: 3}
@@ -4286,7 +4293,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _closeButton: {fileID: 801259843}
   _inventoryItemGrid: {fileID: 1819812201}
-  _inventoryScreenOpenedEvent: {fileID: 11400000, guid: a986974db9dc14ebc893f5f11475649e, type: 2}
   _inventoryScreenClosedEvent: {fileID: 11400000, guid: ca70b9ff4466341c6b9770a9a1e60d6d, type: 2}
   _inventory: {fileID: 11400000, guid: 72b9053f022cd4f9886eab9b9c2d12c2, type: 2}
   _inventoryItemButtonFactory: {fileID: 11400000, guid: 7e8c9100351d84f4882a147b952cdd67, type: 2}
