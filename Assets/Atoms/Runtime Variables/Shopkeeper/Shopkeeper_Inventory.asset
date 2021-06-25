@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ac81b6390ab49f69d76f374fc8a9c8, type: 3}
+  m_Name: Shopkeeper_Inventory
+  m_EditorClassIdentifier: 
+  _equipSlots: []
+  _inventoryItems:
+  - {fileID: 11400000, guid: a6aa54f2a13a2429196ddd3a9cb4395b, type: 2}
+  - {fileID: 11400000, guid: 867560238a897411181cbbcdbb38652c, type: 2}
+  - {fileID: 11400000, guid: 6edf12fe19a664ca89f58e5fec3c39e8, type: 2}
+  _equippedItems: []
+  _equippedItemsChangedEvent: {fileID: 0}
