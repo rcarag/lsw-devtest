@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb22375f76e9a48d88d7554c2610f492, type: 3}
   m_Name: item-shirt-grey
   m_EditorClassIdentifier: 
-  _itemName: Blue Shirt
+  _itemName: Grey Shirt
   _icon: {fileID: 6017651847352594626, guid: 8461396f84abc4ba482de47b45c327f3, type: 3}
   _buyPrice: 100
   _sellPrice: 10
